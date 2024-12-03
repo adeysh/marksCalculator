@@ -10,7 +10,7 @@ const calculateMarks = (formInputs) => {
             totalMarks += parseInt(inputElement.value);
         }
     }
-    const percentage = (totalMarks / 400) * 100;
+    const percentage = ((totalMarks / 400) * 100).toFixed(2);
 
     messageEl.innerText = `You have got ${totalMarks} marks out of 400 and your percentage is ${percentage}%`;
     formContainerEl.appendChild(messageEl);
